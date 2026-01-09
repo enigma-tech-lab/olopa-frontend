@@ -6,7 +6,7 @@ import {
 // ============================================
 // CONFIGURATION
 // ============================================
-const API_URL = 'https://your-backend-url.onrender.com'; // replace with real backend
+const API_URL = 'https://olopa-backend-2.onrender.com'; // replace with real backend
 
 const ROUTES = {
   HOME: 'home',
