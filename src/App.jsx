@@ -3,6 +3,7 @@ import {
   Wallet, Shield, CheckCircle, Clock, ArrowRight, 
   FileText, AlertCircle, Copy, Zap, Lock, Users, Share2
 } from 'lucide-react';
+import { Analytics } from '@vercel/analytics/react';
 
 const API_URL = import.meta.env.VITE_API_URL || 'https://olopa-backend-2.onrender.com';
 
@@ -481,6 +482,7 @@ export default function App() {
       {view === ROUTES.HOME && <HomePage wallet={wallet} setView={setView} connectWallet={connectWallet} />}
       {view === ROUTES.CREATE && <CreateDealPage wallet={wallet} setView={setView} createDeal={createDeal} formData={formData} setFormData={setFormData} errors={errors} loading={loading} />}
       {view === ROUTES.DEAL && <DealPage deal={currentDeal} userRole={userRole} wallet={wallet} setView={setView} signDeal={signDeal} fundEscrow={fundEscrow} loading={loading} />}
+      <Analytics />
     </div>
   );
           }
